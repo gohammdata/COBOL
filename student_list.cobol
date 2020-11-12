@@ -52,4 +52,26 @@
                10 TOTAL-HOURS-IN   PIC 9(03).
                10 HOURS-THIS-SEM-IN PIC 9(02).
                10 MAJOR-IN PIC X(03).
+       01  REPORT-HEADING
+           05 FILLER   PIC X(29) VALUE SPACES.
+           05 FILLER   PIC X(21) VALUE
+           'Semester Student List'.
+
+       01  SEPARATOR-LINE.
+           05 FILLER   PIC X(01) VALUE SPACES.
+           05 FILLER   PIC X(79) VALUE ALL '-'.
+
+       01 COLUMN-HEADING-1
+           05 FILLER   PIC X(01)   VALUE SPACE.
+           05 FILLER   PIC X(79)   VALUE '|    Student
+           'Name   | Student ID.   | Class | Major |   Current | Total'
+            | '.
+       
+       01  COLUMN-HEADING-2.
+           05 FILLER   PIC X(28) VALUE ' |'
+           05 FILLER   PIC X(14) VALUE '|  Number'.
+           05 FILLER   PIC X(08) VALUE '|'.
+           05 FILLER   PIC X(08) VALUE '|'.
+           05 FILLER   PIC X(22) VALUE '| Enrollment | Hours |'.
+
        
