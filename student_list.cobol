@@ -26,4 +26,30 @@
        *****************************************************************
        DATA DIVISION.
        *****************************************************************
+       *---------------------------------------------------------------*
+       FILE-SECTION.
+       *---------------------------------------------------------------*
+       FD STUDENT-FILE LABEL RECORDS ARE OMITTED.
+       01  DUMMY-RECORD    PIC X(80).
+
+       FD STUDENT-REPORT LABEL RECORDS ARE OMITTED.
+       01 REPORT-LINE  PIC X(133).
+       *---------------------------------------------------------------*
+       WORKING-STORAGE SECTION.
+       *---------------------------------------------------------------*
+       01  WORKING-RECORD.
+           04  FILE-STATUS PIC X(05).
+
+       01  STUDENT-RECORD.
+           05 STUDENT-IDENTIFICATION.
+               10 LAST-NAME-IN PIC X(10).
+               10 FIRST-NAME-IN PIC X(10).
+               10 MIDDLE-INITIAL-IN PIC X(01).
+               10  STUDENT-ID-IN PIC X(05).
+           05 FILLER
+           05 ENROLLMENT-INFO.
+               10 CLASSIFICATION-IN PIC X(02).
+               10 TOTAL-HOURS-IN   PIC 9(03).
+               10 HOURS-THIS-SEM-IN PIC 9(02).
+               10 MAJOR-IN PIC X(03).
        
