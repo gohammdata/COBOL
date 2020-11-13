@@ -112,6 +112,12 @@
        *---------------------------------------------------------------*
        200-WRITE-REPORT-HEADING SECTION.
        *---------------------------------------------------------------*
+           WRITE REPORT-LINE FROM REPORT-HEADING AFTER
+               TOP-OF-NEXT-PAGE.
+           WRITE REPORT-LINE FROM SEPARATOR-LINE AFTER 2 LINES.
+           WRITE REPORT-LINE FROM COLUMN-HEADING-1 AFTER 1.
+           WRITE REPORT-LINE FROM COLUMN-HEADING-2 AFTER 1.
+           WRITE REPORT-LINE FROM SEPARATOR-LINE AFTER 1.
        *---------------------------------------------------------------*
        300-READ-AND-PRINT-DETAILS SECTION.
        *---------------------------------------------------------------*
