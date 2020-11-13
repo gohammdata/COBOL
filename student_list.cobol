@@ -46,7 +46,7 @@
                10 FIRST-NAME-IN PIC X(10).
                10 MIDDLE-INITIAL-IN PIC X(01).
                10  STUDENT-ID-IN PIC X(05).
-           05 FILLER
+           05 FILLER   PIC X(05).
            05 ENROLLMENT-INFO.
                10 CLASSIFICATION-IN PIC X(02).
                10 TOTAL-HOURS-IN   PIC 9(03).
@@ -73,5 +73,52 @@
            05 FILLER   PIC X(08) VALUE '|'.
            05 FILLER   PIC X(08) VALUE '|'.
            05 FILLER   PIC X(22) VALUE '| Enrollment | Hours |'.
+
+       01  OUTPUT-RECORD.
+           05 FILLER   PIC X(03) VALUE '|'.
+           05 FIRST-NAME-OUT    PIC X(11).
+           05 MIDDLE-INITIAL-OUT   PIC X(01).
+           05 FILLER   PIC X(02) VALUE '.'.
+           05 LAST-NAME-OUT    PIC X(10).
+           05 FILLER   PIC X(04) VALUE ' |'.
+           05 STUDENT-ID-OUT   PIC 9(09).
+           05 FILLER   PIC X(05) VALUE ' |'.
+           05 CLASSIFICATION-OUT   PIC X(02).
+           05 FILLER   PIC X(06) VALUE '   |'.
+           05 MAJOR-OUT    PIC X(03).
+           05 FILLER   PIC X(08) VALUE '   |'.
+           05 HOURS-THIS-SEM-OUT   PIC 9(02).
+           05 FILLER   PIC X(08) VALUE '   |'.
+           05 TOTAL-HOURS-OUT  PIC 9(03).
+           05 FILLER   PIC X(03) VALUE '   |'.
+       *****************************************************************
+       PROCEDURE DIVISION.
+       *****************************************************************
+       *---------------------------------------------------------------*
+       000-CONTROL-PROCEDURE SECTION.
+       *---------------------------------------------------------------*
+           PERFORM 100-INITIALIZATION.
+           PERFORM 200-WRITE-REPORT-HEADING.
+           PERFORM 300-READ-AND-PRINT-DETAILS
+               UNTIL FILE-STATUS = 'DONE'.
+           PERFORM 400-TERMINATION.
+           STOP RUN.
+       *---------------------------------------------------------------*
+       100-INITIALIZATION SECTION.
+       *---------------------------------------------------------------*
+       *---------------------------------------------------------------*
+       200-WRITE-REPORT-HEADING SECTION.
+       *---------------------------------------------------------------*
+       *---------------------------------------------------------------*
+       300-READ-AND-PRINT-DETAILS SECTION.
+       *---------------------------------------------------------------*
+       *---------------------------------------------------------------*
+       310-READ-DATA SECTION.
+       *---------------------------------------------------------------*
+       *---------------------------------------------------------------*
+       400-TERMINATION SECTION.
+       *---------------------------------------------------------------*
+           CLOSE STUDENT-FILE, STUDENT-REPORT
+
 
        
