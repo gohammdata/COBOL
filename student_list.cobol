@@ -121,6 +121,17 @@
        *---------------------------------------------------------------*
        300-READ-AND-PRINT-DETAILS SECTION.
        *---------------------------------------------------------------*
+       300-ENTRY
+           MOVE STUDENT-ID-IN  TO STUDENT-ID-OUT.
+           MOVE LAST-NAME-IN TO LAST-NAME-OUT.
+           MOVE FIRST-NAME-IN TO FIRST-NAME-OUT.
+           MOVE MIDDLE-INITIAL-IN TO MIDDLE-INITIAL-OUT.
+           MOVE CLASSIFICATION-IN TO CLASSIFICATION-OUT.
+           MOVE TOTAL-HOURS-IN TO TOTAL-HOURS-OUT.
+           MOVE HOURS-THIS-SEM-IN TO HOURS-THIS-SEM-OUT.
+           MOVE MAJOR-IN TO MAJOR-OUT.
+           WRITE REPORT-LINE FROM OUTPUT-RECORD AFTER 2 LINES.
+           PERFORM 310-READ-DATA SECTION.
        *---------------------------------------------------------------*
        310-READ-DATA SECTION.
        *---------------------------------------------------------------*
